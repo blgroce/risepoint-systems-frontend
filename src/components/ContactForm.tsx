@@ -25,17 +25,32 @@ export default function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setSubmitted(true)
-    
-    // Reset form after a delay
-    setTimeout(() => {
-      setFormData({ name: '', email: '', phone: '', message: '' })
-      setSubmitted(false)
-    }, 5000)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      setSubmitted(true)
+      
+      // Reset form after a delay
+      setTimeout(() => {
+        setFormData({ name: '', email: '', phone: '', message: '' })
+        setSubmitted(false)
+      }, 5000)
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('Failed to send message. Please try again or email us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (submitted) {
