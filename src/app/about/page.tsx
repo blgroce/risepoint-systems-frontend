@@ -29,13 +29,13 @@ const values = [
 const leadership = [
   {
     name: 'Brian Groce',
-    role: 'Co-Founder & CTO',
+    role: 'Co-Founder',
     bio: 'With 25+ years in web and software development, Brian brings deep technical expertise and a passion for helping businesses leverage technology to scale effectively.',
     image: '/team/brian.jpg'
   },
   {
     name: 'Tom Erickson',
-    role: 'Co-Founder & CEO',
+    role: 'Co-Founder',
     bio: 'Bringing 50+ years of marketing and advertising experience, Tom understands how to build lasting business relationships and drive growth through strategic implementation.',
     image: '/team/tom.jpg'
   }

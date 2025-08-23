@@ -7,9 +7,9 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon, CalendarDaysIcon, CheckCircleIcon 
 const contactInfo = [
   {
     name: 'Email',
-    value: 'hello@risepointsolutions.com',
+    value: 'hello@risepointsystems.com',
     icon: EnvelopeIcon,
-    href: 'mailto:hello@risepointsolutions.com'
+    href: 'mailto:hello@risepointsystems.com'
   },
   {
     name: 'Phone',
@@ -19,7 +19,7 @@ const contactInfo = [
   },
   {
     name: 'Office',
-    value: 'San Francisco, CA',
+    value: 'Houston, TX',
     icon: MapPinIcon,
     href: null
   }
@@ -50,8 +50,6 @@ export default function Contact() {
     company: '',
     email: '',
     phone: '',
-    projectType: '',
-    budget: '',
     message: ''
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -184,47 +182,6 @@ export default function Contact() {
                         className="block w-full rounded-md border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#0066CC] sm:text-sm sm:leading-6"
                         placeholder="+1 (555) 123-4567"
                       />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
-                        Project Type
-                      </label>
-                      <select
-                        name="projectType"
-                        id="projectType"
-                        value={formData.projectType}
-                        onChange={handleChange}
-                        className="block w-full rounded-md border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-[#0066CC] sm:text-sm sm:leading-6"
-                      >
-                        <option value="">Select a service...</option>
-                        <option value="ai-workflow">AI Workflow Integration</option>
-                        <option value="custom-development">Custom Software Development</option>
-                        <option value="process-automation">Process Automation</option>
-                        <option value="ai-strategy">AI Strategy Consulting</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                        Budget Range
-                      </label>
-                      <select
-                        name="budget"
-                        id="budget"
-                        value={formData.budget}
-                        onChange={handleChange}
-                        className="block w-full rounded-md border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-[#0066CC] sm:text-sm sm:leading-6"
-                      >
-                        <option value="">Select budget...</option>
-                        <option value="under-50k">Under $50,000</option>
-                        <option value="50k-100k">$50,000 - $100,000</option>
-                        <option value="100k-250k">$100,000 - $250,000</option>
-                        <option value="250k-500k">$250,000 - $500,000</option>
-                        <option value="over-500k">Over $500,000</option>
-                      </select>
                     </div>
                   </div>
 
