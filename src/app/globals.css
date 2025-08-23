@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  /* Risepoint Brand Colors - Matching Logo */
+  --primary-blue: #0066CC;
+  --primary-blue-dark: #0052A3;
+  --primary-blue-light: #0080FF;
+  --accent-cyan: #00AACC;
+  --accent-cyan-dark: #0088AA;
+  --accent-cyan-light: #00CCEE;
+  
+  /* Base colors */
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Semantic colors */
+  --primary: var(--primary-blue);
+  --primary-hover: var(--primary-blue-dark);
+  --accent: var(--accent-cyan);
+  --accent-hover: var(--accent-cyan-dark);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure animations are smooth */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  opacity: 0.5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue-dark);
+}
+
+/* Subtle background patterns */
+.bg-subtle-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(0, 102, 204, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 170, 204, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(0, 102, 204, 0.02) 0%, transparent 50%);
+}
+
+.bg-mesh-pattern {
+  background-image: 
+    linear-gradient(90deg, rgba(0, 102, 204, 0.02) 1px, transparent 1px),
+    linear-gradient(rgba(0, 102, 204, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(circle, rgba(0, 102, 204, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Animated gradient backgrounds */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.bg-animated-gradient {
+  background: linear-gradient(-45deg, #f8fafc, #e6f2ff, #e0f7ff, #f8fafc);
+  background-size: 400% 400%;
+  animation: gradient-shift 20s ease infinite;
+}
+
+/* Utility classes for brand colors */
+.text-primary { color: var(--primary-blue); }
+.text-accent { color: var(--accent-cyan); }
+.bg-primary { background-color: var(--primary-blue); }
+.bg-accent { background-color: var(--accent-cyan); }
+.border-primary { border-color: var(--primary-blue); }
+.border-accent { border-color: var(--accent-cyan); }
+
+/* Focus styles using brand colors */
+.focus-primary:focus {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+.focus-accent:focus {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
