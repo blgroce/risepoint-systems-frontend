@@ -6,22 +6,10 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon, CalendarDaysIcon, CheckCircleIcon 
 
 const contactInfo = [
   {
-    name: 'Email',
-    value: 'hello@risepointsystems.com',
-    icon: EnvelopeIcon,
-    href: 'mailto:hello@risepointsystems.com'
-  },
-  {
     name: 'Phone',
-    value: '+1 (555) 123-4567',
+    value: '(281) 935-0373',
     icon: PhoneIcon,
-    href: 'tel:+15551234567'
-  },
-  {
-    name: 'Office',
-    value: 'Houston, TX',
-    icon: MapPinIcon,
-    href: null
+    href: 'tel:+12819350373'
   }
 ]
 
@@ -303,9 +291,14 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">
                   Schedule a 30-minute discovery call to discuss your AI implementation needs.
                 </p>
-                <button className="w-full bg-[#0066CC] text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#0052A3] transition-colors">
+                <a 
+                  href="https://calendar.app.google/meShfgWMUGYxype19"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-[#0066CC] text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#0052A3] transition-colors text-center"
+                >
                   Book Calendar Appointment
-                </button>
+                </a>
               </div>
 
               {/* FAQ */}
